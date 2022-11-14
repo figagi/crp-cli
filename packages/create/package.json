@@ -1,0 +1,43 @@
+{
+  "name": "@crpjs/cli-create",
+  "version": "0.0.10",
+  "description": "create-crp",
+  "keywords": [
+    "create",
+    "crp",
+    "create-crp"
+  ],
+  "author": "wangshudong <me@shudong.wang>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "create.js",
+  "directories": {
+    "link:npm": "npm link",
+    "test": "__tests__"
+  },
+  "files": [
+    "create.js",
+    "InitProject.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crpjs/crp-cli.git",
+    "directory": "packages/create"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "maintainers": [
+    "shudong",
+    "wangshudong"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^8.1.0",
+    "fs-extra": "^10.0.0",
+    "got": "11.8.2",
+    "inquirer": "^8.1.2",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "gitHead": "42ce44b64703d13fd451816ff4d402d9b8f2a727"
+}

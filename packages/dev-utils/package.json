@@ -1,0 +1,31 @@
+{
+  "name": "@crpjs/dev-utils",
+  "version": "0.0.12",
+  "description": "> dev utils",
+  "author": "wangshudong <me@shudong.wang>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/dev-utils.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crpjs/crp-cli.git",
+    "directory": "packages/dev-utils"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "maintainers": [
+    "shudong"
+  ],
+  "gitHead": "42ce44b64703d13fd451816ff4d402d9b8f2a727",
+  "dependencies": {
+    "chalk": "4.1.2"
+  }
+}
