@@ -1,6 +1,6 @@
 {
   "name": "@crpjs/cli-run",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "testName": "",
   "description": "> TODO: description",
   "author": "wangshudong <me@shudong.wang>",
@@ -29,7 +29,7 @@
     "wangshudong"
   ],
   "dependencies": {
-    "@crpjs/dev-utils": "^0.0.12",
+    "@crpjs/dev-utils": "0.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "babel-jest": "^27.4.2",
