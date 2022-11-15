@@ -192,6 +192,12 @@ module.exports = function (webpackEnv) {
             .replace(/\\/g, '/')
         : isEnvDevelopment &&
         (info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')),
+      // https://github.com/umijs/qiankun/issues/574
+      // webpack 默认的 globalObject 值是 'window'，通常不配就行，如果改成了 'this' 会导致沙箱泄露，从而导致不同实例共用了同一个 chunk 运行时，而前一个运行时因为卸载后 element 被置为 null，下一个实例因为还是在同一运行时里会直接使用前一个闭包中的 element，从而造成了报错
+      globalObject: 'window',
+      library: `${systemName}-[name]`,
+      libraryTarget: 'umd',
+      // jsonpFunction: `webpackJsonp_${systemName}`,
     },
     cache: {
       type: 'filesystem',
