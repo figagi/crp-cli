@@ -21,8 +21,8 @@ class Service {
     const config = this.loadConfig();
     config.name = config.name || appPackageJson.name;
     process.env.crp_CONFIG = JSON.stringify(config);
-    process.env.crp_ENV = this.env;
-    process.env.crp_MODE = this.mode;
+    process.env.CRP_ENV = this.env;
+    process.env.CRP_MODE = this.mode;
 
     // if (config.cdnDeploy && this.mode === 'build') {
     //   const { qiniuConfig } = require(`${privateName}/fig-dev-utils`)

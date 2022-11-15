@@ -5,7 +5,7 @@ process.env.NODE_ENV = 'production';
 
 
 const other = JSON.parse(process.env.other || '{}');
-let iscrpEnv = ['prod', 'pre', 'test', 'dev'].includes(process.env.crp_ENV);
+let iscrpEnv = ['prod', 'pre', 'test', 'dev'].includes(process.env.CRP_ENV);
 if (!iscrpEnv) {
   console.log('-e params not supported');
   process.exit(1);

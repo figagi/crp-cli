@@ -502,7 +502,7 @@ module.exports = function (webpackEnv) {
         )
       ),
       new WebpackBar({
-        name: 'crp',
+        name: 'CRP',
         color: '#00AFF2',
         profile: true,
         minimal: false,

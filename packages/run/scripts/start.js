@@ -8,9 +8,9 @@ process.on('unhandledRejection', err => {
 });
 
 // 校验传入的环境
-let iscrpEnv = ["prod", "pre", "test", "dev"].includes(process.env.crp_ENV);
+let iscrpEnv = ["prod", "pre", "test", "dev"].includes(process.env.CRP_ENV);
 if (!iscrpEnv) {
-  console.log("-e params not supported");
+  console.log(`${process.env.CRP_ENV} -e params not supported`);
   process.exit(1);
 }
 

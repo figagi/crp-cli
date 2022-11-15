@@ -24,7 +24,6 @@ const dotenvFiles = [
 ].filter(Boolean);
 
 dotenvFiles.forEach(dotenvFile => {
-  console.log('dotenvFile', dotenvFile)
   if (fs.existsSync(dotenvFile)) {
     require('dotenv-expand')(
       require('dotenv').config({
@@ -70,6 +69,5 @@ function getClientEnvironment(publicUrl) {
   return { raw, stringified };
 }
 
-console.log('getClientEnvironment', getClientEnvironment())
 // process.exit(1);
 module.exports = getClientEnvironment;
