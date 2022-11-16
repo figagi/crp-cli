@@ -68,6 +68,9 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 const lessRegex = /\.(less)$/;
 const lessModuleRegex = /\.module\.(less)$/;
 
+const systemName = paths.appPackageJson.name;
+
+
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
     return false;

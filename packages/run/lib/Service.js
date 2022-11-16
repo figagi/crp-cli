@@ -20,7 +20,7 @@ class Service {
     this.env = env;
     const config = this.loadConfig();
     config.name = config.name || appPackageJson.name;
-    process.env.crp_CONFIG = JSON.stringify(config);
+    process.env.CRP_CONFIG = JSON.stringify(config);
     process.env.CRP_ENV = this.env;
     process.env.CRP_MODE = this.mode;
 
