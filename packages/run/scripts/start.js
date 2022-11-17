@@ -44,11 +44,9 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
   process.exit(1);
 }
 
-// Tools like Cloud9 rely on this.
+
 const devServer = JSON.parse(process.env.CRP_CONFIG).devServer || {};
-// const { devServer = {} } = userWebpackConfig
 const DEFAULT_PORT = parseInt(process.env.PORT, 10) || devServer.port || 6010;
-// const DEFAULT_PORT = parseInt(process.env.crp_PORT, 10) || 6010;
 const HOST = process.env.HOST || '0.0.0.0';
 
 if (devServer.port) {
@@ -60,8 +58,6 @@ if (devServer.port) {
     )
   );
 }
-
-
 
 if (process.env.HOST) {
   console.log(
