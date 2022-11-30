@@ -37,11 +37,11 @@
   },
   "dependencies": {
     "@crpjs/cli-create": "0.0.0",
-    "@crpjs/cli-run": "^0.0.12",
+    "@crpjs/cli-run": "^0.0.11",
     "@crpjs/dev-utils": "0.0.0",
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
     "minimist": "^1.2.5"
   },
-  "gitHead": "27dc9d1d4e1f8dd141945eac3cd2bea959f5714e"
+  "gitHead": "f750709ff8e2b943505aa419393e908e80d70e18"
 }

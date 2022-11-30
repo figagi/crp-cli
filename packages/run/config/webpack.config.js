@@ -83,6 +83,12 @@ const hasJsxRuntime = (() => {
     return false;
   }
 })();
+const { loadConfig } = require('@crpjs/dev-utils')
+const crpConfig = loadConfig() || {};
+const { merge } = require('webpack-merge');
+
+console.log('crpConfig', crpConfig)
+const userWebpackConfig = crpConfig.webpackConfig || {};
 
 module.exports = function (webpackEnv) {
   const isEnvDevelopment = webpackEnv === 'development';
@@ -166,7 +172,7 @@ module.exports = function (webpackEnv) {
     return loaders;
   };
 
-  return {
+  const defaultConfig = {
     target: ['browserslist'],
     stats: 'errors-warnings',
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
@@ -632,4 +638,17 @@ module.exports = function (webpackEnv) {
     ].filter(Boolean),
     performance: false,
   };
+
+  return merge(
+    defaultConfig,
+    userWebpackConfig,
+    isEnvProduction
+      ? {
+        externals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      }
+      : {},
+  );
 };

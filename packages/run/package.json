@@ -83,6 +83,7 @@
     "webpack": "^5.64.4",
     "webpack-dev-server": "^4.6.0",
     "webpack-manifest-plugin": "^4.0.2",
+    "webpack-merge": "^5.8.0",
     "webpackbar": "^5.0.2",
     "workbox-webpack-plugin": "^6.4.1"
   },
@@ -97,5 +98,5 @@
     "source-map-resolve": "^0.6.0",
     "css": "^3.0.0"
   },
-  "gitHead": "27dc9d1d4e1f8dd141945eac3cd2bea959f5714e"
+  "gitHead": "f750709ff8e2b943505aa419393e908e80d70e18"
 }
