@@ -111,6 +111,7 @@ importers:
       webpack: ^5.64.4
       webpack-dev-server: ^4.6.0
       webpack-manifest-plugin: ^4.0.2
+      webpack-merge: ^5.8.0
       webpackbar: ^5.0.2
       workbox-webpack-plugin: ^6.4.1
     dependencies:
@@ -168,6 +169,7 @@ importers:
       webpack: registry.npmjs.org/webpack/5.75.0
       webpack-dev-server: registry.npmjs.org/webpack-dev-server/4.11.1_webpack@5.75.0
       webpack-manifest-plugin: registry.npmjs.org/webpack-manifest-plugin/4.1.1_webpack@5.75.0
+      webpack-merge: 5.8.0
       webpackbar: registry.npmjs.org/webpackbar/5.0.2_webpack@5.75.0
       workbox-webpack-plugin: registry.npmjs.org/workbox-webpack-plugin/6.5.4_webpack@5.75.0
 
@@ -1851,7 +1853,6 @@ packages:
       is-plain-object: 2.0.4
       kind-of: 6.0.3
       shallow-clone: 3.0.1
-    dev: true
 
   /clone/1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
@@ -2651,7 +2652,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       isobject: 3.0.1
-    dev: true
 
   /is-plain-object/5.0.0:
     resolution: {integrity: sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==}
@@ -2692,7 +2692,6 @@ packages:
   /isobject/3.0.1:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /jake/10.8.5:
     resolution: {integrity: sha512-sVpxYeuAhWt0OTWITwT98oyV0GsXyMlXCF+3L1SuafBVUIr/uILGRB+NqwkzhgXKvoJpDIpQvqkUALgdmQsQxw==}
@@ -2753,7 +2752,6 @@ packages:
   /kind-of/6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /lerna/6.0.3:
     resolution: {integrity: sha512-DzRCTZGoDI502daViNK1Ha+HPAVvTp72xshDOQ6o6SWCDTvnxFI3hGF6CBqGWnOoPwEOlQowHEIcPw5PjoMz8A==}
@@ -3733,7 +3731,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       kind-of: 6.0.3
-    dev: true
 
   /shebang-command/2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -4085,6 +4082,14 @@ packages:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
     dev: true
 
+  /webpack-merge/5.8.0:
+    resolution: {integrity: sha512-/SaI7xY0831XwP6kzuwhKWVKDP9t1QY1h65lAFLbZqMPIuYcD9QAW4u9STIbU9kaJbPBB/geU/gLr1wDjOhQ+Q==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      clone-deep: 4.0.1
+      wildcard: 2.0.0
+    dev: false
+
   /whatwg-url/5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
     dependencies:
@@ -4105,6 +4110,10 @@ packages:
     dependencies:
       string-width: registry.npmjs.org/string-width/4.2.3
     dev: true
+
+  /wildcard/2.0.0:
+    resolution: {integrity: sha512-JcKqAHLPxcdb9KM49dufGXn2x3ssnfjbcaQdLlfZsL9rH9wgDQjUtDxbo8NE0F6SFvydeu1VhZe7hZuHsB2/pw==}
+    dev: false
 
   /wordwrap/1.0.0:
     resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
@@ -10747,7 +10756,7 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       ini: registry.npmjs.org/ini/1.3.8
-      kind-of: registry.npmjs.org/kind-of/6.0.3
+      kind-of: 6.0.3
       which: registry.npmjs.org/which/1.3.1
     dev: false
 
@@ -12378,6 +12387,7 @@ packages:
     name: kind-of
     version: 6.0.3
     engines: {node: '>=0.10.0'}
+    dev: true
 
   registry.npmjs.org/kleur/3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/kleur/-/kleur-3.0.3.tgz}
